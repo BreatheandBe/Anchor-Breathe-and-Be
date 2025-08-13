@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Affirmation</title>
-<style>
-    body {
-        height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Pleasant blue gradient */
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
-    .affirmation {
-        font-size: 2rem;
-        line-height: 1.5;
-        max-width: 90%;
-        background: rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Affirmations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #a8d0e6, #f0f7ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .affirmation-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .affirmation-box p {
+            font-size: 1.2rem;
+            color: #1a2a47;
+            line-height: 1.5;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <div class="affirmation-box">
+        <p id="affirmation"></p>
+    </div>
 
-<div class="affirmation" id="affirmation"></div>
+    <script>
+        const affirmations = [
+            "🌟 I am <span class='bold'>valuable</span> and my presence makes a difference.",
+            "💪 I <span class='bold'>believe</span> in myself and my abilities.",
+            "✨ I <span class='bold'>trust my journey</span> and embrace every step.",
+            "🌈 I <span class='bold'>never give up</span> on my dreams.",
+            "🌸 I am surrounded by <span class='bold'>love and positivity</span>.",
+            "☀️ Every day, I grow <span class='bold'>stronger and wiser</span>.",
+            "💖 I attract <span class='bold'>abundance and joy</span> into my life.",
+            "🌿 I forgive myself and welcome <span class='bold'>peace</span>.",
+            "🦋 I am <span class='bold'>creative and inspired</span> every day.",
+            "🔥 I have the <span class='bold'>power to achieve</span> everything I desire."
+        ];
 
-<script>
-    const affirmations = [
-        "🌟 I am worthy of all the good things in life.",
-        "🌸 I choose happiness and gratitude today.",
-        "💪 I am strong, confident, and unstoppable.",
-        "🌈 My potential to succeed is limitless.",
-        "✨ I radiate positivity and attract positivity.",
-        "🌞 Every day, I grow and improve myself.",
-        "🌊 I am calm, peaceful, and in control.",
-        "💖 I am loved, valued, and appreciated.",
-        "🌻 I focus on solutions, not problems.",
-        "🌌 I believe in myself and my abilities."
-    ];
-
-    const randomIndex = Math.floor(Math.random() * affirmations.length);
-    document.getElementById("affirmation").textContent = affirmations[randomIndex];
-</script>
-
+        // Pick a random affirmation
+        const randomIndex = Math.floor(Math.random() * affirmations.length);
+        document.getElementById("affirmation").innerHTML = affirmations[randomIndex];
+    </script>
 </body>
 </html>
-
