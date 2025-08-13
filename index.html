@@ -1,59 +1,98 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Affirmations</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #a8d0e6, #f0f7ff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .affirmation-box {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            border-radius: 20px;
-            max-width: 600px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .affirmation-box p {
-            font-size: 1.2rem;
-            color: #1a2a47;
-            line-height: 1.5;
-        }
-        .bold {
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Affirmations</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #a8d0e6, #f0f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .affirmation-box {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 700px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .affirmation-box p {
+      font-size: 1.2rem;
+      color: #1a2a47;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .bold { font-weight: 700; }
+  </style>
 </head>
 <body>
-    <div class="affirmation-box">
-        <p id="affirmation"></p>
-    </div>
+  <div class="affirmation-box">
+    <p id="affirmation" aria-live="polite"></p>
+  </div>
 
-    <script>
-        const affirmations = [
-            "🌟 I am <span class='bold'>valuable</span> and my presence makes a difference.",
-            "💪 I <span class='bold'>believe</span> in myself and my abilities.",
-            "✨ I <span class='bold'>trust my journey</span> and embrace every step.",
-            "🌈 I <span class='bold'>never give up</span> on my dreams.",
-            "🌸 I am surrounded by <span class='bold'>love and positivity</span>.",
-            "☀️ Every day, I grow <span class='bold'>stronger and wiser</span>.",
-            "💖 I attract <span class='bold'>abundance and joy</span> into my life.",
-            "🌿 I forgive myself and welcome <span class='bold'>peace</span>.",
-            "🦋 I am <span class='bold'>creative and inspired</span> every day.",
-            "🔥 I have the <span class='bold'>power to achieve</span> everything I desire."
-        ];
+  <script>
+    const affirmations = [
+      "I am <span class='bold'>capable</span>, and I approach every challenge with confidence and curiosity, knowing it will help me grow 🌱💪.",
+      "I <span class='bold'>trust my instincts</span>, take action, and learn from every outcome, whether it is a success or a lesson 🔍✨.",
+      "I am <span class='bold'>resilient</span>, and obstacles do not define me; they strengthen my ability to persevere 🛡️🔥.",
+      "I take <span class='bold'>consistent steps</span> toward my goals, knowing small progress adds up to big results 🏃‍♂️📈.",
+      "I value my <span class='bold'>time and energy</span>, investing both in what truly matters to me ⏳💎.",
+      "I embrace my <span class='bold'>strengths</span> and acknowledge my <span class='bold'>weaknesses</span>, using both to grow 🌟🛠️.",
+      "I stay <span class='bold'>focused</span> on what I can control and release what I cannot 🌀🕊️.",
+      "I face <span class='bold'>uncertainty</span> with courage and curiosity, knowing it is part of growth 🌄🧭.",
+      "I <span class='bold'>honor my feelings</span>, but I do not let fear dictate my choices 💖🗝️.",
+      "I am <span class='bold'>worthy</span> of success, happiness, and fulfillment, and I pursue them with integrity 🌞🏆.",
+      "I <span class='bold'>trust my journey</span>, even when the path is unclear, knowing each step teaches me something valuable 🛤️✨.",
+      "I give my <span class='bold'>best effort</span> in everything I do, and I am proud of my progress 💪🎯.",
+      "I am <span class='bold'>patient</span> with myself and understand that growth takes time ⏳🌿.",
+      "I <span class='bold'>attract opportunities</span> by being proactive and persistent 🚀🌈.",
+      "I <span class='bold'>learn from mistakes</span> and turn them into stepping stones for success 🪨🧗‍♂️.",
+      "I am <span class='bold'>confident</span> in my ability to handle challenges and find solutions 🧠⚡.",
+      "I surround myself with <span class='bold'>positivity</span> and people who uplift me 🌸🤝.",
+      "I take care of my <span class='bold'>body, mind, and spirit</span> because I deserve balance and well-being 🧘‍♂️🥗💧.",
+      "I trust that every <span class='bold'>experience</span> I have is shaping me into a wiser, stronger person 🌱🦅.",
+      "I am <span class='bold'>creative and resourceful</span>, finding ways to solve problems and create opportunities 🎨💡.",
+      "I <span class='bold'>acknowledge my progress</span>, no matter how small, and celebrate my achievements 🎉🌟.",
+      "I set <span class='bold'>boundaries</span> that protect my energy and allow me to thrive 🚧💎.",
+      "I believe in my <span class='bold'>potential</span> and act in ways that bring it to life 🌞🚀.",
+      "I am <span class='bold'>courageous</span>, taking risks that align with my values and goals 🦁🎯.",
+      "I stay <span class='bold'>calm</span> in the face of uncertainty and approach challenges with clarity 🧘‍♀️🔮.",
+      "I am <span class='bold'>worthy of love, respect, and kindness</span>, and I treat myself accordingly ❤️🤝.",
+      "I focus on <span class='bold'>solutions</span>, not problems, and maintain a proactive mindset 🛠️🌈.",
+      "I attract <span class='bold'>abundance</span> by being open, generous, and hardworking 💰🌟.",
+      "I am <span class='bold'>flexible</span> and adapt to change, knowing it often leads to growth 🌊🍃.",
+      "I release <span class='bold'>self-doubt</span> and trust in my abilities and judgment 🕊️💪.",
+      "I act with <span class='bold'>integrity</span> and align my actions with my values 🌟🛤️.",
+      "I am <span class='bold'>persistent</span>, and setbacks do not deter me from my goals 🏋️‍♂️🔥.",
+      "I nurture <span class='bold'>meaningful connections</span> that inspire growth and joy 🤗🌸.",
+      "I am <span class='bold'>mindful</span> of my thoughts and choose ones that empower me 💭✨.",
+      "I <span class='bold'>honor my journey</span> and embrace each stage of growth with gratitude 🌅🙏.",
+      "I focus on what I can <span class='bold'>contribute</span> rather than what I lack 👐🌈.",
+      "I celebrate my <span class='bold'>uniqueness</span> and trust that my path is mine alone 🌟🛤️.",
+      "I am <span class='bold'>open to learning</span> from everyone and everything around me 📚🌍.",
+      "I stay <span class='bold'>committed to my vision</span>, even when challenges arise 🌞🛡️.",
+      "I <span class='bold'>manage my time and priorities</span> wisely, balancing work, rest, and joy ⏳⚖️🎉.",
+      "I am <span class='bold'>confident in expressing</span> my ideas and standing by my decisions 💬🦁.",
+      "I embrace opportunities to step outside my <span class='bold'>comfort zone</span> and grow 🌱🚀.",
+      "I trust that <span class='bold'>life unfolds perfectly</span>, even when I don’t see the full picture 🌀🌄.",
+      "I release <span class='bold'>negativity</span> and focus on thoughts that uplift and inspire 🌬️🌈.",
+      "I am <span class='bold'>disciplined</span>, consistent, and committed to my personal growth 🏋️‍♀️📈.",
+      "I <span class='bold'>appreciate my journey</span>, knowing each day brings new lessons and possibilities 🌅🌟.",
+      "I act with <span class='bold'>courage</span>, knowing that bold steps lead to meaningful results 🦅🔥.",
+      "I take <span class='bold'>responsibility</span> for my happiness and create it through my choices 💖🛠️.",
+      "I trust that <span class='bold'>challenges are temporary</span> and that I am capable of overcoming them ⛰️🌞.",
+      "I am <span class='bold'>enough</span>, exactly as I am, and I continue growing into the best version of myself 🌟💫."
+    ];
 
-        // Pick a random affirmation
-        const randomIndex = Math.floor(Math.random() * affirmations.length);
-        document.getElementById("affirmation").innerHTML = affirmations[randomIndex];
-    </script>
+    // Pick a random affirmation and inject with markup (to keep bold spans)
+    const randomIndex = Math.floor(Math.random() * affirmations.length);
+    document.getElementById("affirmation").innerHTML = affirmations[randomIndex];
+  </script>
 </body>
 </html>
