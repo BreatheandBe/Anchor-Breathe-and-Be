@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Affirmation</title>
+</head>
+<body style="text-align:center; margin-top:50px; font-family:sans-serif;">
+  <h1>🌟 Your Affirmation 🌟</h1>
+  <img id="randomImage" src="" alt="Affirmation" style="max-width:90%; height:auto; border: 2px solid #333; border-radius: 10px;">
+  <script>
+    const images = [
+      "https://drive.google.com/uc?export=view&id=14BL-tO-da08hYZlx_AqFuTZCzMemRpnV",
+      "https://drive.google.com/uc?export=view&id=1ULEoCUEp7Z3FdilmwGjZlr-g1Xj3BWix",
+      "https://drive.google.com/uc?export=view&id=1QvLbgKFMc2hbEvcUZ2A5RIDT4h8-W7Kj",
+      "https://drive.google.com/uc?export=view&id=1eOq9gf7gqoIhPsKwbAP9ZR2W0JizUvmw",
+      "https://drive.google.com/uc?export=view&id=1ord0WPNd8KfaPaKHNe0Rbp3skkK7y1Sn",
+      "https://drive.google.com/uc?export=view&id=1gvoyYbxvvapg0I6b9O-1JSLMz-SvwpZX"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("randomImage").src = images[randomIndex];
+  </script>
+</body>
+</html>
